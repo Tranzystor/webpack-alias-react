@@ -3,7 +3,7 @@ import React from 'react';
 export default class SimpleComponent extends React.Component {
 
   arrowFunc = () => {
-    return <div>arrow function</div>
+    return <div>arrow TADAM</div>
   };
 
   render() {
