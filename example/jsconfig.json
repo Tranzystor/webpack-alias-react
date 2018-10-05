@@ -5,7 +5,7 @@
       "module": "commonjs",
       "allowSyntheticDefaultImports": true,
       "paths": {
-        "webpack-alias-react": [
+        "webpack-lib": [
           "../src"
         ],
       }

@@ -1,6 +1,11 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const aliases = require('./aliases.js');
 
+const htmlWebpackPlugin = new HtmlWebPackPlugin({
+  template: "./src/index.html",
+  filename: "./index.html"
+});
+
 module.exports = {
   module: {
     rules: [
@@ -10,24 +15,11 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader"
-          }
-        ]
       }
     ]
   },
-  resolve: {
-    alias: aliases
+    resolve: {
+    alias: aliases,
   },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
-    })
-  ]
+  plugins: [htmlWebpackPlugin]
 };

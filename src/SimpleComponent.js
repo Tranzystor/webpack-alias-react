@@ -1,7 +1,13 @@
 import React from 'react';
 
-const SimpleComponent = () => {
-  return 'string';
-};
+export default class SimpleComponent extends React.Component {
 
-export default SimpleComponent;
+  arrowFunc = () => {
+    return <div>arrow function</div>
+  };
+
+  render() {
+    const arrowResult = this.arrowFunc();
+    return <div>result: {arrowResult}</div>
+  }
+};

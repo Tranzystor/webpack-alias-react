@@ -1,11 +1,11 @@
 import React from 'react';
-import { SimpleComponent } from 'webpack-alias-react';
+import { SimpleComponent } from 'webpack-lib';
 
 export default class App extends React.Component {
     render(){
         return (
             <div>
-                react App
+                window
                 <SimpleComponent />
             </div>
             )
